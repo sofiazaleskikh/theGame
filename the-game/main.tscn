@@ -35,6 +35,10 @@ position = Vector2(118.5, 466)
 shape = SubResource("RectangleShape2D_lquwl")
 metadata/_edit_group_ = true
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1818167775]
+position = Vector2(123, 447)
+position_smoothing_enabled = true
+
 [node name="Level" parent="." unique_id=477467920 instance=ExtResource("3_h2yge")]
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1318359845]
