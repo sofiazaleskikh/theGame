@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bxjwjcmdsgwcw"]
+
+[ext_resource type="Script" uid="uid://b5dalpoxc6a4a" path="res://jump_pad.gd" id="1_526ql"]
+[ext_resource type="Texture2D" uid="uid://uucso4m7hwdp" path="res://assets/images/trampoline/Raw Files/Full Tileset.png" id="2_cysje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd87t"]
+atlas = ExtResource("2_cysje")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7ut2"]
+atlas = ExtResource("2_cysje")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hls3s"]
+atlas = ExtResource("2_cysje")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oeeh7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd87t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7ut2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hls3s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipo01"]
+size = Vector2(27, 38)
+
+[node name="jumpPad" type="Area2D" unique_id=1894227244]
+script = ExtResource("1_526ql")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=658750421]
+position = Vector2(390.12503, 338.25)
+scale = Vector2(2.1093705, 2.406251)
+sprite_frames = SubResource("SpriteFrames_oeeh7")
+autoplay = "default"
+frame = 1
+frame_progress = 0.7158538
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1475216503]
+position = Vector2(390, 340)
+shape = SubResource("RectangleShape2D_ipo01")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

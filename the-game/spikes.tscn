@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://sv2ovvcuuf38"]
+
+[ext_resource type="Script" uid="uid://cykf67ell8ijx" path="res://spikes.gd" id="1_s0g1x"]
+[ext_resource type="Texture2D" uid="uid://ul6c12bvacfy" path="res://assets/images/spikes/unavoidable_roller/unavoidable_spikes_just_roller_03.png" id="2_nrdsm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fhau"]
+size = Vector2(41, 93)
+
+[node name="Spikes" type="Area2D" unique_id=705252396]
+script = ExtResource("1_s0g1x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1631372681]
+position = Vector2(426, 285)
+rotation = 1.5707964
+scale = Vector2(0.17006813, 0.19335942)
+texture = ExtResource("2_nrdsm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388825939]
+position = Vector2(428, 281)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_8fhau")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
