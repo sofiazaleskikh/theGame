@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://sv2ovvcuuf38"]
 
-[ext_resource type="Script" uid="uid://cykf67ell8ijx" path="res://spikes.gd" id="1_s0g1x"]
+[ext_resource type="Script" uid="uid://cykf67ell8ijx" path="res://scripts/spikes.gd" id="1_s0g1x"]
 [ext_resource type="Texture2D" uid="uid://ul6c12bvacfy" path="res://assets/images/spikes/unavoidable_roller/unavoidable_spikes_just_roller_03.png" id="2_nrdsm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fhau"]

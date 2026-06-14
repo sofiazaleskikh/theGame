@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxjwjcmdsgwcw"]
 
-[ext_resource type="Script" uid="uid://b5dalpoxc6a4a" path="res://jump_pad.gd" id="1_526ql"]
+[ext_resource type="Script" uid="uid://b5dalpoxc6a4a" path="res://scripts/jump_pad.gd" id="1_526ql"]
 [ext_resource type="Texture2D" uid="uid://uucso4m7hwdp" path="res://assets/images/trampoline/Raw Files/Full Tileset.png" id="2_cysje"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dd87t"]
