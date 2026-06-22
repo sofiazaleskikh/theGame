@@ -301,6 +301,9 @@ sources/0 = SubResource("TileSetAtlasSource_vonw3")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2r41h"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r41h"]
+size = Vector2(129.33334, 18.000004)
+
 [node name="Level" type="Node2D" unique_id=477467920]
 scale = Vector2(3, 3)
 script = ExtResource("1_oi3di")
@@ -347,3 +350,35 @@ collision_mask = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=410730886]
 shape = SubResource("WorldBoundaryShape2D_2r41h")
+
+[node name="Goal" type="Area2D" parent="." unique_id=606237043]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=1962099637]
+position = Vector2(136.66667, -11)
+shape = SubResource("RectangleShape2D_2r41h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Goal" unique_id=1012167292]
+
+[node name="Label" type="Label" parent="Goal/CanvasLayer" unique_id=1228304960]
+offset_left = 343.0
+offset_top = 39.0
+offset_right = 488.0
+offset_bottom = 62.0
+text = "Level completed!!!!"
+
+[node name="Label" type="Label" parent="." unique_id=2008791629]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -11.5
+offset_right = 34.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "SCORE: 0"
+
+[connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]

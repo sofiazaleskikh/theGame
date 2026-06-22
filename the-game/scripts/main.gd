@@ -17,7 +17,9 @@ func _setup_level() -> void:
 		for strawberry in strawberries.get_children():
 			strawberry.collected.connect(increase_score)
 
-func increase_score() -> void:
-	score += 1
-	label.text = "SCORE: %s" % score
+func increase_score(amount: int = 100) -> void:
+	score += amount
+	# Wir prüfen kurz, ob das Label wirklich existiert, bevor wir hineinschreiben
+	if label:
+		label.text = "SCORE: %s" % score
 	

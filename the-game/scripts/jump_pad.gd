@@ -5,4 +5,6 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if "velocity" in body: 
 		body.velocity.y = boost_force
+		if $AnimatedSprite2D.sprite_frames.has_animation("bounce"):
+			$AnimatedSprite2D.play("bounce") # Feedback
 		print("Woosh! Super Jump!")
